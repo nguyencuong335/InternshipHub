@@ -1,0 +1,34 @@
+flowchart TD
+    A[Candidate creates account] --> B[Candidate submits application]
+    B --> C[Candidate uploads CV and personal information]
+    C --> D[System validates required information]
+    D --> E{Application valid?}
+
+    E -- No --> F[System shows validation errors]
+    E -- Yes --> G[Application status becomes Submitted]
+
+    G --> H[HR views new application]
+    H --> I[HR screens candidate profile]
+    I --> J{Pass screening?}
+
+    J -- No --> K[HR updates status to Rejected]
+    K --> L[System sends rejection notification]
+
+    J -- Yes --> M[HR schedules interview]
+    M --> N[HR assigns interviewer]
+    N --> O[System sends interview notification]
+
+    O --> P[Interviewer views candidate profile and CV]
+    P --> Q[Interview is conducted]
+    Q --> R[Interviewer submits structured feedback]
+
+    R --> S[Hiring manager reviews feedback and pipeline]
+    S --> T{Final decision?}
+
+    T -- Offer --> U[HR sends offer notification]
+    T -- Reject --> V[HR sends rejection notification]
+    T -- Hold --> W[Candidate status becomes Hold]
+
+    U --> X[System stores status history]
+    V --> X
+    W --> X

@@ -1,0 +1,15 @@
+flowchart TD
+    A[Candidate sends CV or application form] --> B[HR downloads CV]
+    B --> C[HR updates tracking spreadsheet]
+    C --> D[HR screens candidate manually]
+    D --> E{Pass screening?}
+
+    E -- No --> F[HR sends rejection manually]
+    E -- Yes --> G[HR contacts candidate]
+    G --> H[HR schedules interview by chat or email]
+    H --> I[Interviewer reviews CV]
+    I --> J[Interview is conducted]
+    J --> K[Interviewer sends feedback by chat or email]
+    K --> L[HR updates candidate status manually]
+    L --> M[Hiring manager reviews selected candidates]
+    M --> N[HR sends final result]
